@@ -9,7 +9,7 @@ conichi-text {
       @include position(absolute, .2em null null 0);
       @include transition(all 0.2s ease);
       font-size: .7em;
-      color: $colorSoftBlue; 
+      color: $colorMediumGrey; 
       pointer-events: none;
     }
 
@@ -20,14 +20,14 @@ conichi-text {
       font-size: 1em;
       padding: 1.5em 0 0;
       border: none;
-      border-bottom: 2px solid $colorSoftBlue;
+      border-bottom: 2px solid $colorMediumGrey;
       outline: none;
       
       &.masked::selection { background: transparent }
 
       &:active,
       &:focus {
-        color: $colorLightGrey;
+        color: $colorMediumGrey;
         background: $colorBackground;
         border-bottom: 2px solid $colorPrimaryCorp;
       }

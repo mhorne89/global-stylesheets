@@ -1,8 +1,13 @@
 // Color variables
 // Styleguide 1.0
 
-$colorBackground: #DDDDDD;
+$colorBackground: #fbfbfb;
+$colorBackgroundDarkened: darken($colorBackground, 2%);
 
+$colorPrimaryCorp: #5D95DA;
+$colorSecondaryCorp: #536C8A;
+
+$colorSoftBlue: #A6CAF7;
 $colorBrightBlue: #5D95DA;
 $colorMediumBlue: #536C8A;
 $colorDarkBlue: #2E3E51;
