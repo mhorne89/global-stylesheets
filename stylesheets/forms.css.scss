@@ -1,0 +1,108 @@
+// Forms, inputs, fieldsets, etc.
+// Styleguide 1.0.
+
+.error, .success {
+  @include position(fixed, 0 50% null null);
+  @include animation-name(fadeOut);
+  @include animation-fill-mode(forwards);
+  @include animation-duration(1s);  
+  @include animation-delay(2s);
+  width: 30em;
+  margin-right: -15em;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  color: $colorOffWhite;
+  padding: .8em 1.5em;
+  text-align: center;
+}
+
+.error {
+  background: rgba(242, 97, 97, .7);
+  border: 1px solid $colorErrorRed;
+}
+
+.success {
+  background: rgba(64, 178, 146, .7);
+  border: 1px solid $colorSuccessGreen;
+}
+
+.warning {
+  background: rgba(247, 184, 104, .5);
+  border: 1px solid $colorWarningOrange;
+  border-radius: 3px;
+  color: $colorOffWhite;
+  padding: .8em 1.5em;
+  text-align: center;
+  margin-bottom: 2em
+}
+
+@include keyframes(fadeOut) {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+
+label {
+  @include transition(color .2s);
+  display: block;
+  margin-bottom: 1px;
+  font-size: 1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $colorSecondaryCorp;
+}
+
+input, textarea {
+  width: 100%;
+  padding: .8em 1em;
+}
+
+textarea {
+  height: 10em;
+  resize: none;
+}
+
+form {
+  margin-bottom: 4em;
+  
+  hr { margin: 2em 0 }
+}
+
+input[type=submit],
+input[type=text] { -webkit-appearance: none }
+
+input[type=text] { border-radius: 0 }
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: $colorBackground !important;
+  -webkit-box-shadow: 0 0 0px 1000px $colorBackground inset;
+  -webkit-text-fill-color: $colorOffWhite !important;
+  color: $colorOffWhite !important;
+}
+
+input[type=text],
+input[type=password],
+input[type=number], 
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=date] {
+  font-family: $fontFamilyLight !important;
+  border-bottom: 1px solid $colorOffWhite;
+  padding: 0;
+
+  &:focus {
+    border-bottom: 1px solid $colorPrimaryCorp;
+    background: -webkit-linear-gradient(top, transparent 95%, $colorPrimaryCorp 95%) no-repeat;
+    background: linear-gradient(to bottom, transparent 95%, $colorPrimaryCorp 95%) no-repeat;
+  }
+}

@@ -1,0 +1,14 @@
+//-------------------------------------
+// Predefined classes
+//-------------------------------------
+
+.button { @extend %button }
+
+.clear { clear: both }
+
+.center { text-align: center }
+
+.align {
+  vertical-align: middle;
+  display: inline-block;
+}
