@@ -1,0 +1,80 @@
+conichi-datepicker {
+  .input-container {
+    position: relative;
+    cursor: pointer;
+
+    .calendar {
+      @include position(absolute, null .1em .5em null);
+      @include size(1em);
+    } 
+  }
+
+  conichi-modal modal-container {
+    max-width: 30em;
+    padding-top: 3em;
+
+    h2 {
+      @include position(absolute, 0 0 null 0);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      background: $colorPrimaryCorp;
+      color: $colorOffWhite;
+      padding: 1em 0;
+      margin-bottom: 2em;
+      text-align: center;
+    }
+  }
+
+  .selection {
+    max-height: 20em;
+    overflow-y: scroll;
+    -ms-overflow-style: scrollbar;
+
+    &.time {
+      overflow-y: unset;
+
+      span {
+        text-align: center;
+        display: block;
+        font-size: 3em;
+        margin: .5em 0 1em;
+      }
+      
+      .select-button-container { display: block }
+      .smaller { width: 100% }
+    }
+
+    .years, .months, .days, .hours, .minutes {
+      text-align: center;
+      border-radius: 5px;
+      padding: .7em 0;
+      cursor: pointer;
+
+      &:hover { background: $colorLightGrey }
+    }
+
+    .years, .months {
+      @include span-columns(3 of 12);
+      @include omega(4n);
+    }
+
+    .days {
+      @include span-columns(1 of 7);
+      @include omega(7n);
+    }
+
+    .half:first-child {
+      padding-right: 1em;
+      border-right: 1px solid $colorLightGrey;
+    }
+
+    .half:last-child {
+      padding-left: 1em;
+    }
+
+    .hours, .minutes {
+      @include span-columns(1 of 8);
+      @include omega(8n);
+    }
+  }
+}
