@@ -35,8 +35,8 @@ conichi-text {
       &:active + label,
       &:focus + label { color: $colorPrimaryCorp }
 
-      &:active + .mask-container .input-mask .carat, { border-right: 1px solid $colorOffWhite; }
-      &:focus + .mask-container .input-mask .carat { border-right: 1px solid $colorOffWhite; }
+      &:active + .mask-container .input-mask .carat, { border-right: 1px solid $colorMediumGrey; }
+      &:focus + .mask-container .input-mask .carat { border-right: 1px solid $colorMediumGrey; }
     }
 
     .mask-container {

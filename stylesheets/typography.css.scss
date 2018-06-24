@@ -17,7 +17,7 @@ body {
   font-weight: 100;
   font-size: 14px;
   line-height: 1.3em;
-  color: $colorOffWhite;
+  color: $colorMediumGrey;
   text-rendering: optimizeLegibility;
 }
 
@@ -38,7 +38,7 @@ a {
   &:hover,
   &:active,
   &:focus {
-    color: $colorOffWhite;
+    color: $colorMediumGrey;
 
     &:hover { color: $colorSecondaryCorp }
   }
