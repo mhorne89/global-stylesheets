@@ -35,15 +35,13 @@
 
 %button {
   @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
-  font-family: $fontFamilyLight;
+  font-family: $fontFamilyRegular;
   font-size: 1em;
-  border-radius: 5px;
-  text-shadow: 0 1px 0px rgba(black, .2);
+  border-radius: 3px;
   text-align: center;
-  padding: 9px 50px 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: $colorPrimaryCorp;
-  color: $colorOffWhite;
+  padding: 7px 40px 6px;
+  border: 1px solid $colorPrimaryCorp;
+  color: $colorPrimaryCorp;
   text-transform: uppercase;
   cursor: pointer;
   min-width: 10em;
@@ -55,17 +53,23 @@
   &:active,
   &:focus {
     @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
-    background: rgba(93, 149, 218, .7);
-    color: $colorOffWhite;
+    background: rgba($colorPrimaryCorp, .1);
   }
 
   &.pull-right { float: right }
 
   &.smaller { width: auto }
 
+  &.red {
+    border: 1px solid $colorErrorRed;
+    color: $colorErrorRed;
+
+    &:hover, &:active, &:focus { background: rgba($colorErrorRed, .1) }
+  }
+
   &.outline {
-    border: 1px solid $colorOffWhite;
-    color: $colorOffWhite;
+    border: 1px solid $colorDarkGrey;
+    color: $colorDarkGrey;
     background-color: rgba(255, 255, 255, 0);
 
     &:hover,

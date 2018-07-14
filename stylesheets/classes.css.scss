@@ -12,3 +12,16 @@
   vertical-align: middle;
   display: inline-block;
 }
+
+.card {
+  background: $colorOffWhite;
+  border: 1px solid $colorMediumGrey;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 7px -1px;
+  margin: 1em 0;
+  padding: 1.5em 2em;
+  
+  h2 {
+    
+  }
+}

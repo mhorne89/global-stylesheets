@@ -1,9 +1,9 @@
 conichi-sidebar {
-  @include position(fixed, 0 null 0 -22em);
+  @include position(fixed, 0 null 0 -20em);
   @include transition(all .3s ease-in-out);
   border-right: 1px solid darken($colorLightGrey, 15%);
-  background: $colorBackgroundDarkened;
-  width: 22em;
+  background: $colorDarkGrey;
+  width: 20em;
   z-index: 9;
   -webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.5);
@@ -44,7 +44,7 @@ conichi-sidebar {
     }
 
     + conichi-sidebar-content conichi-footer {
-      @include media($breakTabletLandscape) { @include position(fixed, null 0 0 22em) }
+      @include media($breakTabletLandscape) { @include position(fixed, null 0 0 20em) }
     }
   }
 
@@ -52,9 +52,9 @@ conichi-sidebar {
     font-family: $fontFamilyBold;
     display: block;
     font-size: 1em;
-    color: $colorPrimaryCorp;
+    color: $colorMediumGrey;
     text-align: left;
-    border-bottom: 1px solid $colorPrimaryCorp;
+    border-bottom: 1px solid $colorMediumGrey;
     padding: 2em 1.4em .5em;
     text-transform: uppercase;
     margin: 0;
@@ -62,17 +62,17 @@ conichi-sidebar {
 
   a {
     display: block;
-    padding: .8em 1.5em .6em;
-    color: $colorSecondaryCorp;
-    border-bottom: 1px solid darken($colorLightGrey, 15%);
+    padding: .8em 1em .6em;
+    color: $colorMediumGrey !important;
+    border-bottom: 1px solid darken($colorMediumGrey, 15%);
     text-transform: uppercase;
     font-size: .9em;
     cursor: pointer;
 
     &:hover,
     &.active {
-      background: lighten($colorBackground, 2%);
-      color: $colorPrimaryCorp;
+      background: lighten($colorDarkGrey, 2%);
+      color: $colorPrimaryCorp !important;
     }
 
     span {
@@ -103,7 +103,7 @@ conichi-sidebar-content {
 
   @include media($breakTabletLandscape) {
     @include position(absolute, 0 0 4em 0);
-    margin-left: 22em;
+    margin-left: 20em;
   }
 }
 

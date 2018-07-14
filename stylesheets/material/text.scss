@@ -9,14 +9,14 @@ conichi-text {
       @include position(absolute, .2em null null 0);
       @include transition(all 0.2s ease);
       font-size: .7em;
-      color: $colorMediumGrey; 
+      color: $colorDarkGrey; 
       pointer-events: none;
     }
 
     input {
       @include transition(all 0.2s ease);
       background: $colorBackground;
-      color: $colorMediumGrey; 
+      color: $colorDarkGrey; 
       font-size: 1em;
       padding: 1.5em 0 0;
       border: none;
@@ -27,7 +27,7 @@ conichi-text {
 
       &:active,
       &:focus {
-        color: $colorMediumGrey;
+        color: $colorDarkGrey;
         background: $colorBackground;
         border-bottom: 2px solid $colorPrimaryCorp;
       }
@@ -35,8 +35,8 @@ conichi-text {
       &:active + label,
       &:focus + label { color: $colorPrimaryCorp }
 
-      &:active + .mask-container .input-mask .carat, { border-right: 1px solid $colorMediumGrey; }
-      &:focus + .mask-container .input-mask .carat { border-right: 1px solid $colorMediumGrey; }
+      &:active + .mask-container .input-mask .carat, { border-right: 1px solid $colorDarkGrey; }
+      &:focus + .mask-container .input-mask .carat { border-right: 1px solid $colorDarkGrey; }
     }
 
     .mask-container {

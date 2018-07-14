@@ -1,23 +1,22 @@
 // Type settings, font styles, etc
 // Styleguide 1.0.
 
-@include font-face('Gotham', './assets/sass/global-stylesheets/fonts/Gotham-Book');
-@include font-face('GothamLight', './assets/sass/global-stylesheets/fonts/Gotham-Light');
-@include font-face('GothamBold', './assets/sass/global-stylesheets/fonts/Gotham-Bold');
-@include font-face('GothamBlack', './assets/sass/global-stylesheets/fonts/Gotham-Black');
+@include font-face('OpenSans', './assets/sass/global-stylesheets/fonts/OpenSans-Regular');
+@include font-face('OpenSansLight', './assets/sass/global-stylesheets/fonts/OpenSans-Light');
+@include font-face('OpenSansBold', './assets/sass/global-stylesheets/fonts/OpenSans-SemiBold');
 
-$fontFamilyRegular: Gotham, Helvetica, sans-serif;
-$fontFamilyLight: GothamLight, Helvetica, sans-serif;
-$fontFamilyBold: GothamBold, Helvetica, sans-serif;
-$fontFamilyBlack: GothamBlack, Helvetica, sans-serif;
+$fontFamilyRegular: OpenSans, Helvetica, sans-serif;
+$fontFamilyLight: OpenSansLight, Helvetica, sans-serif;
+$fontFamilyBold: OpenSansBold, Helvetica, sans-serif;
 
 body {
   @include font-feature-settings("kern");
-  font-family: $fontFamilyLight;
+  font-family: $fontFamilyRegular;
   font-weight: 100;
   font-size: 14px;
   line-height: 1.3em;
-  color: $colorMediumGrey;
+  letter-spacing: .5px;
+  color: $colorDarkGrey;
   text-rendering: optimizeLegibility;
 }
 
@@ -30,6 +29,8 @@ h1, h2, h3, h4 {
   font-weight: 100;
   line-height: 1;
   margin: 0;
+  
+  &.center { text-align: center }
 }
 
 a {
@@ -38,7 +39,7 @@ a {
   &:hover,
   &:active,
   &:focus {
-    color: $colorMediumGrey;
+    color: $colorDarkGrey;
 
     &:hover { color: $colorSecondaryCorp }
   }
@@ -46,11 +47,9 @@ a {
 
 h1 {
   font-family: $fontFamilyBold;
-  letter-spacing: 1px;
   font-size: 2.5em;
   line-height: 1.3;
   text-transform: uppercase;
-  text-align: center;
   padding: 1em 0;
 
   @include media($breakTabletPortrait) { font-size: 2.5em }
@@ -58,24 +57,20 @@ h1 {
 }
 
 h2 {
-  font-size: 1.3em;
-  text-align: center;
-  color: $colorOffWhite;
+  font-family: $fontFamilyBold;
+  color: $colorPrimaryCorp;
+  font-size: 1.2em;
   
   &.faded { opacity: .5 }
   &.pull-left { text-align: left }
 }
 
 h3 {
-  font-size: 1.3em;
-  font-family: $fontFamilyBold;
-  text-transform: capitalize;
+  font-size: 1.2em;
 }
 
 h4 {
-  font-size: 1.2em;
-  text-align: center;
-  margin: 0;
+  font-size: 1.1em;
 }
 
 
