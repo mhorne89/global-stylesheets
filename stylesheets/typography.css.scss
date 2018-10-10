@@ -1,13 +1,9 @@
 // Type settings, font styles, etc
 // Styleguide 1.0.
 
-@include font-face('OpenSans', './assets/sass/global-stylesheets/fonts/OpenSans-Regular');
-@include font-face('OpenSansLight', './assets/sass/global-stylesheets/fonts/OpenSans-Light');
-@include font-face('OpenSansBold', './assets/sass/global-stylesheets/fonts/OpenSans-SemiBold');
-
-$fontFamilyRegular: OpenSans, Helvetica, sans-serif;
-$fontFamilyLight: OpenSansLight, Helvetica, sans-serif;
-$fontFamilyBold: OpenSansBold, Helvetica, sans-serif;
+$fontFamilyRegular: Helvetica, sans-serif;
+$fontFamilyLight: Helvetica, sans-serif;
+$fontFamilyBold: Helvetica, sans-serif;
 
 body {
   @include font-feature-settings("kern");
