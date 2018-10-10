@@ -1,5 +1,5 @@
-conichi-checkbox,
-conichi-checkbox-group {
+parabol-checkbox,
+parabol-checkbox-group {
   .checkbox {
     @include position(relative, 0 null null 2.5em);
     @include size(auto 2em);
@@ -18,7 +18,7 @@ conichi-checkbox-group {
     }
 
     &.checked {
-      img { display: block }
+      fa { display: block }
 
       &:before {
         border: 2px solid $colorPrimaryCorp;
@@ -26,9 +26,8 @@ conichi-checkbox-group {
       }
     }
 
-    img {
-      @include position(absolute, 0 null null -1.88em);
-      @include size(1.2em);
+    fa {
+      @include position(absolute, 0 null null -1.8em);
       display: none;
     }
   }

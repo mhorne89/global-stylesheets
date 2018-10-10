@@ -1,4 +1,4 @@
-conichi-select-button {
+parabol-select-button {
   .select-button-container {
     position: relative;
     display: inline-block;
@@ -10,7 +10,7 @@ conichi-select-button {
       border: 1px solid $colorPrimaryCorp;
       color: $colorPrimaryCorp;
       padding: .6em 3.6em .5em 1.5em;
-      font-weight: 900;
+      text-shadow: none;
       z-index: 9999;
 
       &:after {
@@ -27,7 +27,8 @@ conichi-select-button {
     }
 
     .select-button-dropdown {
-      @include position(absolute, 2.2em 1px null 1px);
+      @include position(absolute, 2.7em 1px null 1px);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .2);
       border: 1px solid $colorSoftBlue;
       background: $colorOffWhite;
       padding-top: .3em;

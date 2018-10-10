@@ -1,4 +1,4 @@
-conichi-notification {
+parabol-notification {
   .error, .success,  {
     @include position(fixed, 0 50% null null);
     @include animation-name(fadeOut);

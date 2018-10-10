@@ -1,19 +1,20 @@
-conichi-datepicker {
+parabol-datepicker {
   .input-container {
     position: relative;
     cursor: pointer;
 
     .calendar {
-      @include position(absolute, null .1em .5em null);
+      @include position(absolute, null .1em .6em null);
       @include size(1em);
     } 
   }
 
-  conichi-modal modal-container {
-    max-width: 30em;
-    padding-top: 3em;
+  parabol-modal modal-container {
+    overflow: visible;
+    max-width: 25em;
+    padding: 3em 0 1em;
 
-    h2 {
+    .header {
       @include position(absolute, 0 0 null 0);
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
@@ -22,14 +23,45 @@ conichi-datepicker {
       padding: 1em 0;
       margin-bottom: 2em;
       text-align: center;
+      
+      h2 {
+        color: $colorOffWhite;
+        text-align: center;
+      }
+
+      parabol-select-button {
+        .button, .button:hover {
+          background: $colorPrimaryCorp;
+          color: $colorOffWhite;
+          padding: .6em 1em .5em 0;
+          margin: 0 !important;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .days, .weekday {
+      @include span-columns(1 of 7);
+      @include omega(7n);
+      text-align: center;
+    }
+
+    .days {
+      border-radius: 5px;
+      padding: .7em 0;
+      cursor: pointer;
+
+      &:hover { background: $colorLightGrey }
+    }
+
+    .weekday {
+      color: darken($colorLightGrey, 20%);
+      text-transform: uppercase;
+      font-size: .7em;
     }
   }
 
   .selection {
-    max-height: 20em;
-    overflow-y: scroll;
-    -ms-overflow-style: scrollbar;
-
     &.time {
       overflow-y: unset;
 
@@ -39,28 +71,9 @@ conichi-datepicker {
         font-size: 3em;
         margin: .5em 0 1em;
       }
-      
+
       .select-button-container { display: block }
       .smaller { width: 100% }
-    }
-
-    .years, .months, .days, .hours, .minutes {
-      text-align: center;
-      border-radius: 5px;
-      padding: .7em 0;
-      cursor: pointer;
-
-      &:hover { background: $colorLightGrey }
-    }
-
-    .years, .months {
-      @include span-columns(3 of 12);
-      @include omega(4n);
-    }
-
-    .days {
-      @include span-columns(1 of 7);
-      @include omega(7n);
     }
 
     .half:first-child {
@@ -68,13 +81,6 @@ conichi-datepicker {
       border-right: 1px solid $colorLightGrey;
     }
 
-    .half:last-child {
-      padding-left: 1em;
-    }
-
-    .hours, .minutes {
-      @include span-columns(1 of 8);
-      @include omega(8n);
-    }
+    .half:last-child { padding-left: 1em }
   }
 }

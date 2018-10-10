@@ -1,4 +1,4 @@
-conichi-modal {
+parabol-modal {
   @include position(fixed, 0 0 0 0);
   background: rgba(0, 0, 0, .5);
   z-index: 99999999;
@@ -8,7 +8,6 @@ conichi-modal {
     transform: translate(50%, -50%);
     @include size(90% auto);
     background: $colorOffWhite;
-    border: 1px solid $colorDarkGrey;
     color: $colorDarkGrey;
     border-radius: 5px;
     z-index: 999999999;
@@ -56,7 +55,7 @@ conichi-modal {
       background: $colorSoftBlue;
       border-top: 1px solid $colorLightGrey;
       height: 3.5em;
-      padding: .75em 1em;
+      padding: .3em 1em;
 
       .button {
         padding: 9px 20px 8px;

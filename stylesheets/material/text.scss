@@ -1,4 +1,4 @@
-conichi-text {
+parabol-text {
   display: block;
 
   .group {
@@ -15,19 +15,19 @@ conichi-text {
 
     input {
       @include transition(all 0.2s ease);
-      background: $colorBackground;
+      background: transparent;
       color: $colorDarkGrey; 
       font-size: 1em;
       padding: 1.5em 0 0;
       border: none;
-      border-bottom: 2px solid $colorMediumGrey;
+      border-bottom: 2px solid rgba($colorMediumGrey, .6);
       outline: none;
       
       &.masked::selection { background: transparent }
 
       &:active,
       &:focus {
-        color: $colorDarkGrey;
+        color: lighten($colorDarkGrey, 5%);
         background: $colorBackground;
         border-bottom: 2px solid $colorPrimaryCorp;
       }
@@ -59,7 +59,7 @@ conichi-text {
 
     .view-password {
       @include position(absolute, null 0 0 null);
-      @include size(1.8em);
+      @include size(1.2em 1.6em);
       cursor: pointer;
     }
   }
