@@ -36,6 +36,7 @@ a {
   &:active,
   &:focus {
     color: $colorDarkGrey;
+    outline: none;
 
     &:hover { color: $colorSecondaryCorp }
   }

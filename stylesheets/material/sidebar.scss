@@ -59,22 +59,25 @@ parabol-sidebar {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+    outline: none;
 
     &:hover {
       background: lighten($colorDarkGrey, 5%);
-      color: $colorSecondaryCorp;
+      color: $colorSoftBlue;
+    }
+    
+    &.active {
+      background: lighten($colorDarkGrey, 10%);
+      color: $colorSoftBlue;
     }
     
     fa { color: darken($colorLightGrey, 10%) }
 
-    a {
-      display: block;
+    p {
       font-family: $fontFamilyLight;
       line-height: 1.2em;
       font-size: .65em;
-      margin-top: .7em;
-
-      &.active { color: $colorPrimaryCorp }
+      margin: .7em 0 0 0;
     }
   }
 }
