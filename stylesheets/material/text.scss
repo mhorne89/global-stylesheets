@@ -6,30 +6,42 @@ parabol-text {
     margin: .5em 0;
 
     label {
-      @include position(absolute, .2em null null 0);
+      @include position(absolute, .2em null null .7em);
       @include transition(all 0.2s ease);
       font-size: .7em;
       color: $colorDarkGrey; 
       pointer-events: none;
+      font-weight: 500;
     }
 
     input {
       @include transition(all 0.2s ease);
-      background: transparent;
+      background: white;
       color: $colorDarkGrey; 
       font-size: 1em;
-      padding: 1.5em 0 0;
       border: none;
-      border-bottom: 2px solid rgba($colorMediumGrey, .6);
+      border-bottom: 2px solid $colorSecondaryCorp;
+      border-radius: 3px;
+      -webkit-box-shadow: rgba(0, 0, 0, .4) 0px 1px 3px 0px;
+      -moz-box-shadow: rgba(0, 0, 0, .4) 0px 1px 3px 0px;
+      box-shadow: rgba(0, 0, 0, .4) 0px 1px 3px 0px;
+      padding: 1.5em .6em .5em;
       outline: none;
-      
+
       &.masked::selection { background: transparent }
 
       &:active,
       &:focus {
+        transform: scale(1.004);
+        transform-origin: center;
         color: lighten($colorDarkGrey, 5%);
-        background: $colorBackground;
+        background: white;
         border-bottom: 2px solid $colorPrimaryCorp;
+
+        &+label {
+          transform: scale(1.05);
+          transform-origin: center;
+        }
       }
 
       &:active + label,
