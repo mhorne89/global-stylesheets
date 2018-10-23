@@ -83,14 +83,12 @@ parabol-sidebar {
 }
 
 parabol-sidebar-content {
-  @include position(absolute, 0 0 0 0);
+  @include position(fixed, 0 0 0 0);
   @include transition(all .3s ease-in-out);
   background: $colorBackground;
   -ms-overflow-style: scrollbar;
+  overflow-y: scroll;
   margin-left: 0;
 
-  @include media($breakTabletLandscape) {
-    @include position(absolute, 0 0 4em 0);
-    margin-left: 5em;
-  }
+  @include media($breakTabletLandscape) { margin-left: 5em }
 }
