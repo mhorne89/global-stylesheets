@@ -70,7 +70,7 @@ parabol-text {
     }
 
     .view-password {
-      @include position(absolute, null 0 0 null);
+      @include position(absolute, null .5em .3em null);
       @include size(1.2em 1.6em);
       cursor: pointer;
     }
